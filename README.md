@@ -1,73 +1,134 @@
-Gerenciando Instâncias EC2 na AWS
-O que aprendi
 
-Durante este laboratório aprendi como funciona o Amazon EC2 e como ele permite criar e gerenciar servidores virtuais na nuvem de forma prática. Também entendi a importância de escolher corretamente o tipo de instância de acordo com a necessidade da aplicação, levando em consideração processamento, memória e armazenamento.
+# O que aprendi
 
-Outro conceito importante foi a diferença entre escalabilidade vertical e escalabilidade horizontal. Aprendi que a escalabilidade vertical consiste em aumentar ou diminuir os recursos da própria instância, enquanto a escalabilidade horizontal adiciona novas instâncias para dividir a carga de trabalho.
+Durante este laboratório consegui entender melhor como funciona o Amazon EC2 e sua importância dentro da AWS. Também aprendi conceitos relacionados ao gerenciamento de instâncias, criação de imagens AMI, utilização de Snapshots EBS e escalabilidade.
 
-Amazon EC2
+---
 
-O Amazon EC2 (Elastic Compute Cloud) é um serviço da AWS que permite criar máquinas virtuais na nuvem.
+# Amazon EC2
+
+O Amazon EC2 (Elastic Compute Cloud) é um serviço que permite criar servidores virtuais na nuvem.
 
 Com ele é possível:
 
-Hospedar aplicações;
-Criar servidores web;
-Criar ambientes de desenvolvimento;
-Realizar testes;
-Executar aplicações de forma escalável.
+- Hospedar aplicações;
+- Criar ambientes de desenvolvimento;
+- Executar servidores web;
+- Realizar testes;
+- Aumentar ou reduzir recursos conforme a necessidade.
 
-Também aprendi que a AWS oferece diversos tipos de instâncias, cada uma voltada para uma necessidade específica, como maior processamento, mais memória ou maior capacidade de armazenamento.
+Aprendi também que existem diferentes tipos de instâncias, cada uma voltada para um tipo de carga de trabalho.
 
-AMI (Amazon Machine Image)
+---
 
-Aprendi que uma AMI funciona como uma imagem completa de uma máquina virtual.
+# Escalabilidade
 
-Ela armazena:
+Um dos conceitos mais importantes foi entender a diferença entre os dois tipos de escalabilidade.
 
-Sistema operacional;
-Aplicações instaladas;
-Configurações;
-Dependências e pacotes.
+## Escalabilidade Vertical
 
-Esse recurso facilita bastante a criação de novas instâncias, já que é possível replicar exatamente o mesmo ambiente sempre que necessário.
+Consiste em aumentar ou diminuir os recursos da mesma instância.
 
-Snapshots EBS
+Exemplo:
 
-Durante o laboratório também aprendi sobre os Snapshots EBS.
+- Mais CPU;
+- Mais memória RAM.
 
-Os Snapshots são utilizados para criar backups dos volumes de armazenamento das instâncias EC2. Caso ocorra algum problema, esses backups permitem restaurar os dados com mais segurança.
+É utilizada quando uma única máquina precisa de mais desempenho.
 
-É um recurso importante para proteger informações e facilitar a recuperação do ambiente.
+---
 
-Escalabilidade
+## Escalabilidade Horizontal
 
-Um dos assuntos mais importantes foi entender os dois tipos de escalabilidade.
+Consiste em adicionar novas instâncias para dividir a carga entre elas.
 
-Escalabilidade Vertical
+Esse modelo é muito utilizado junto com:
 
-Consiste em aumentar ou diminuir os recursos da mesma instância, como CPU e memória.
+- Auto Scaling;
+- Elastic Load Balancer.
 
-Escalabilidade Horizontal
+---
 
-Consiste em adicionar novas instâncias para distribuir a carga de trabalho entre elas.
+# Amazon Machine Image (AMI)
 
-Esse modelo normalmente é utilizado junto com serviços como Auto Scaling e Load Balancer.
+Aprendi que uma AMI é uma imagem completa de uma instância.
 
-Instâncias Spot
+Ela pode conter:
 
-Aprendi que as Spot Instances são instâncias disponibilizadas pela AWS com um custo muito menor que as instâncias On-Demand.
+- Sistema operacional;
+- Aplicações instaladas;
+- Configurações;
+- Dependências.
 
-A principal vantagem é o preço reduzido, porém elas podem ser interrompidas pela AWS caso os recursos sejam necessários para outros clientes.
+Sua principal vantagem é permitir criar novas instâncias exatamente iguais à original, economizando tempo na configuração.
 
-Por isso, são mais indicadas para tarefas que podem ser interrompidas sem causar prejuízos.
+---
 
-O que achei mais interessante
+# Snapshots EBS
 
-O que mais chamou minha atenção foi a facilidade que a AWS oferece para criar servidores em poucos minutos e aumentar ou diminuir recursos conforme a necessidade da aplicação.
+Os Snapshots EBS são utilizados para realizar backups dos volumes de armazenamento.
 
-Também achei interessante a possibilidade de criar uma AMI para reutilizar um ambiente já configurado e utilizar Snapshots para manter backups dos dados de forma simples.
+Com eles é possível:
 
-Conclusão
+- Restaurar dados;
+- Criar novos volumes;
+- Recuperar ambientes;
+- Garantir maior segurança das informações.
 
-Este laboratório me ajudou a entender melhor como funciona o gerenciamento de instâncias EC2 na AWS. Aprendi conceitos importantes como AMIs, Snapshots EBS, escalabilidade vertical e horizontal e os diferentes tipos de instâncias disponíveis. Esses conhecimentos serão úteis para futuros projetos utilizando computação em nuvem e também servem como base para continuar estudando outros serviços da AWS.
+---
+
+# Instâncias Spot
+
+Outro conceito interessante foi o das Spot Instances.
+
+Essas instâncias possuem um custo reduzido porque utilizam capacidade ociosa da AWS.
+
+Sua principal desvantagem é que podem ser interrompidas pela própria AWS a qualquer momento.
+
+São indicadas para:
+
+- Processamentos em lote;
+- Testes;
+- Renderização;
+- Machine Learning.
+
+---
+
+# Principais conhecimentos adquiridos
+
+Ao concluir este laboratório consegui compreender melhor:
+
+- O funcionamento do Amazon EC2;
+- Diferença entre escalabilidade vertical e horizontal;
+- Como utilizar AMIs;
+- A importância dos Snapshots EBS;
+- Quando utilizar Instâncias Spot;
+- A estrutura básica para gerenciamento de servidores na AWS.
+
+---
+
+# Minha conclusão
+
+Este laboratório foi importante para consolidar os conceitos básicos de gerenciamento de instâncias EC2.
+
+Além de aprender sobre criação e administração de servidores na nuvem, também compreendi a importância de recursos como AMIs e Snapshots para facilitar implantações e aumentar a segurança dos ambientes.
+
+Esses conhecimentos servirão como base para continuar estudando outros serviços da AWS e aprofundar meus conhecimentos em computação em nuvem.
+
+---
+
+## Tecnologias utilizadas
+
+- Amazon EC2
+- Amazon EBS
+- Amazon Machine Image (AMI)
+- AWS Management Console
+- Git
+- GitHub
+
+---
+
+## Referências
+
+- Documentação oficial da AWS
+- Curso "Gerenciando Instâncias EC2 na AWS" - DIO
